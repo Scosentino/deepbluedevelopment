@@ -1,3 +1,4 @@
+
 <div id="page-wrapper">
 <% @projects.each do |project| %>
   <div class="row">
@@ -146,6 +147,6 @@
    <% end %>
 
 
-
+<%= link_to 'New Project', new_project_path, class: 'btn btn-primary' %>
 <%= link_to 'Log-out', destroy_user_session_path, method: :delete, :class => 'btn btn-primary' %>
 </div>
