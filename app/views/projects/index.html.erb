@@ -1,0 +1,151 @@
+<div id="page-wrapper">
+<% @projects.each do |project| %>
+  <div class="row">
+    <div class="col-lg-12">
+        <h1 class="align-right"><%= project.title %></h1>
+        <h1 class="page-header">Dashboard <p id="notice"><%= notice %></p>
+</h1>
+    </div><!-- /.col-lg-12 -->
+  </div>
+
+             <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            On-Boarding
+                            <a class="btn btn-primary align-right" href="http://www.heroku.com"><img style="height:1em" src="http://www.erlang-factory.com/static/upload/media/141164523387564heroku1.png">Heroku</a>
+                            <a class="btn btn-primary align-right" href="http://www.github.com">Github<i class="fa fa-github"></i></a>
+
+                        </div>
+                        <div class="panel-body">
+                            <p>If you havent done so already you will need to do a few things to begin the project. <br> First goto  <br> Next, create a new repository and in the account setting > Members/Collaborators add "Scosentino"</p>
+                            <p>Finally you will need to goto Heroku and create an account. We will need the credentials so make sure the password is share-friendly.
+                              <br>
+                            </p>
+                        </div>
+                        <div class="panel-footer">
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Wire-framing
+                        </div>
+                        <div class="panel-body">
+                            <p>In this phase we are managing your current requirements and creating the "first draft" of your project. Stay tuned as we will soon be sending you access to view it. The link will go live here first!</p>
+                        </div>
+                        <div class="panel-footer">
+                            <%= project.wireframe %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Design
+                        </div>
+                        <div class="panel-body">
+                            <p>We are taking the first draft and adding life to it here. This will be a close rendition of the final project. Any style changes that come out of the Design phase will be addressed before moving on to the development phase.</p>
+                        </div>
+                        <div class="panel-footer">
+                            <%= project.design %>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            Development
+                        </div>
+                        <div class="panel-body">
+                            <p>The final stage to your project. Here we will create the working production ready version of your project. Stay tuned for the live link!</p>
+                        </div>
+                        <div class="panel-footer">
+                            <%= project.development %>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-6 -->
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  <i class="fa fa-bar-chart-o fa-fw"></i> Project Goals
+                  <div class="pull-right">
+                      <div class="btn-group">
+                          <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                              Actions
+                              <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu pull-right" role="menu">
+                              <li><%= link_to 'Edit', edit_project_path(project) %>
+                              </li>
+                              <li><a href="#">Another action</a>
+                              </li>
+                              <li><a href="#">Something else here</a>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a href="#">Separated link</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <!-- /.panel-heading -->
+              <div class="panel-body">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="panel panel-success">
+                          <div class="panel-heading">
+                              Goal 1
+                          </div>
+                          <div class="panel-body">
+                              <p><%= project.goal1 %></p>
+                          </div>
+                          <div class="panel-footer">
+
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="panel panel-success">
+                          <div class="panel-heading">
+                              Goal 2
+                          </div>
+                          <div class="panel-body">
+                              <p><%= project.goal2 %></p>
+                          </div>
+                          <div class="panel-footer">
+
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="panel panel-success">
+                          <div class="panel-heading">
+                             Goal 3
+                          </div>
+                          <div class="panel-body">
+                              <p><%= project.goal3 %></p>
+                          </div>
+                          <div class="panel-footer">
+
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.row -->
+              </div>
+              <!-- /.panel-body -->
+          </div>
+
+   <% end %>
+
+
+
+<%= link_to 'Log-out', destroy_user_session_path, method: :delete, :class => 'btn btn-primary' %>
+</div>

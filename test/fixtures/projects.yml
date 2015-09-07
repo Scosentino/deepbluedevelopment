@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  body: MyText
+  alternate: MyText
+  goal1: MyText
+  goal2: MyText
+  goal3: MyText
+  status: MyString
+  design: false
+  wireframe: false
+  development: false
+
+two:
+  title: MyString
+  body: MyText
+  alternate: MyText
+  goal1: MyText
+  goal2: MyText
+  goal3: MyText
+  status: MyString
+  design: false
+  wireframe: false
+  development: false
